@@ -39,6 +39,7 @@ Il sistema di autenticazione si basa su:
 
 ## Avvio del Progetto
 
+url : localhost:5173
 Per avviare l'ambiente di sviluppo, eseguire i seguenti comandi:
 
 ```bash
