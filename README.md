@@ -43,7 +43,7 @@ Per avviare l'ambiente di sviluppo, eseguire i seguenti comandi:
 
 ```bash
 # Avvia i container in background
-docker compose up -d
+docker compose up --build
 
 # Accedi al container PHP
 docker exec -it php bash
