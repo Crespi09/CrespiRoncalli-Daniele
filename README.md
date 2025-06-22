@@ -39,8 +39,6 @@ Il sistema di autenticazione si basa su:
 
 ## Avvio del Progetto
 
-url : localhost:5173. 
-
 Per avviare l'ambiente di sviluppo, eseguire i seguenti comandi:
 
 ```bash
@@ -55,3 +53,8 @@ php bin/console doctrine:schema:update --force
 
 # Ferma e rimuove i container
 docker compose down
+
+
+```
+
+url : localhost:5173
