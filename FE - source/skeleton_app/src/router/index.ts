@@ -6,7 +6,7 @@ import HomeView from '@/views/HomeView.vue'
 import LoginView from '@/views/LoginView.vue'
 import RegisterView from '@/views/RegisterView.vue'
 import ProfileView from '@/views/ProfileView.vue'
-import BookListVIew from '@/views/BookListVIew.vue'
+// import BookListVIew from '@/views/BookListVIew.vue'
 import RaceView from '@/views/RaceView.vue'
 
 
@@ -44,12 +44,12 @@ const initRouter = (currentUser$: BehaviorSubject<string | null>) => {
         component: ProfileView,
         meta: { requiresAuth: true }
       },
-      {
-        path: '/book',
-        name: 'book',
-        component: BookListVIew,
-        meta: { requiresAuth: true }
-      },
+      // {
+      //   path: '/book',
+      //   name: 'book',
+      //   component: BookListVIew,
+      //   meta: { requiresAuth: true }
+      // },
       {
         path: '/race',
         name: 'race',

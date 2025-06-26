@@ -18,6 +18,7 @@ import FloatLabel from 'primevue/floatlabel';
 import DevicesTable from '@/components/DevicesTable.vue';
 import CardComponent from '@/components/CardComponent.vue';
 // import AddRoleTable from '@/components/AddRoleTable.vue';
+import userImage from '../assets/user.png';
 
 
 const router = useRouter();
@@ -27,7 +28,7 @@ const name = ref('');
 const surname = ref('');
 const update = ref(false);
 const selectedFile = ref<File | null>(null);
-const imageUrl = ref('');
+const imageUrl = ref(userImage);
 
 const errors = ref<string[]>([]);
 const roles = ref<string[]>([]);
@@ -305,7 +306,7 @@ defineExpose({ selectedFile, onFileSelected, loading });
                     <h1>{{ email }}</h1>
 
                     <div class="profile-image-container flex justify-center items-center w-full">
-                        <Image :src="imageUrl" alt="profile image" width="250" preview class="mx-auto" />
+                        <Image :src="imageUrl" width="250" preview class="mx-auto" />
                     </div>
 
                     <br>

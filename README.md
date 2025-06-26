@@ -45,16 +45,17 @@ Per avviare l'ambiente di sviluppo, eseguire i seguenti comandi:
 # Avvia i container in background
 docker compose up -d --build
 
-# Accedi al container PHP
-docker exec -it php bash
-
-# Aggiorna lo schema del database
-php bin/console doctrine:schema:update --force
-
 # Ferma e rimuove i container
-docker compose down
+docker compose down -v
 
 
+```
+
+## Credenziali Accesso phpMyAdmin
+
+```bash
+username : root
+password : default
 ```
 
 url : localhost:5173

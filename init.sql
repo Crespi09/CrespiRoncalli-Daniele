@@ -187,7 +187,6 @@ CREATE TABLE `user_race` (
 --
 
 INSERT INTO `user_race` (`user_id`, `race_id`, `id`, `name`, `size`, `total`, `km`) VALUES
-(1, 1, 6, 'martina cagliani', 'S', 85.5, 10),
 (1, 1, 15, 'gianluca pierone', 'L', 85.5, 10),
 (1, 1, 16, '4 2', 'M', 85.5, 10);
 

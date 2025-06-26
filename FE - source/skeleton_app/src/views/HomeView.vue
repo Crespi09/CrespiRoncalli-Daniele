@@ -13,15 +13,13 @@
                         Gara Podistica
                       </p>
 
-                      <div class="flex items-center gap-4 justify-center lg:justify-start">
-                          <!-- <Button label="Learn More" type="button" />
-                          <Button label="Live Demo" type="button" outlined /> -->
-
+                      <!-- <div class="flex items-center gap-4 justify-center lg:justify-start">
                           <RouterLink to="/about">
                             <Button label="About Us" type = "button" outlined />
                         </RouterLink>
 
                       </div>
+                      -->
                   </div>
               </div>
           </div>
