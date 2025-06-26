@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Mar 14, 2025 alle 11:57
+-- Creato il: Giu 26, 2025 alle 09:35
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -47,13 +47,6 @@ CREATE TABLE `doctrine_migration_versions` (
   `execution_time` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Dump dei dati per la tabella `doctrine_migration_versions`
---
-
-INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
-('DoctrineMigrations\\Version20250314094524', '2025-03-14 09:45:27', 98);
-
 -- --------------------------------------------------------
 
 --
@@ -87,7 +80,7 @@ CREATE TABLE `photo` (
 --
 
 INSERT INTO `photo` (`id`, `user_id`, `path`) VALUES
-(1, 1, 'user-png-67d408b31c14e.png');
+(1, 1, 'Immagine-2025-06-09-102734-png-6846b770c112b.png');
 
 -- --------------------------------------------------------
 
@@ -108,13 +101,8 @@ CREATE TABLE `race` (
 --
 
 INSERT INTO `race` (`id`, `place`, `date`, `coeff`, `max_partecipanti`) VALUES
-(1, 'Roma', '2025-04-10 00:00:00', 1.15, 1000),
-(2, 'Milano', '2025-05-15 00:00:00', 1.2, 1500),
-(3, 'Napoli', '2025-06-01 00:00:00', 1.1, 800),
-(4, 'Torino', '2025-07-05 00:00:00', 1.25, 1200),
-(5, 'Firenze', '2025-08-20 00:00:00', 1.18, 900),
-(6, 'Bologna', '2025-09-10 00:00:00', 1.22, 1100),
-(7, 'Venezia', '2025-10-05 00:00:00', 1.3, 1300);
+(1, 'Napoli', '2025-06-10 14:15:49', 5.7, 500),
+(2, 'Bergamo', '2025-06-10 14:15:49', 5.6, 800);
 
 -- --------------------------------------------------------
 
@@ -135,8 +123,12 @@ CREATE TABLE `refresh_token` (
 --
 
 INSERT INTO `refresh_token` (`id`, `user_id`, `device`, `refresh_token`, `roles`) VALUES
-(1, 1, '127.0.0.1:PostmanRuntime/7.43.2', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NDE5NDU1NjcsImV4cCI6MTc0MjU1MDM2NywiZGF0YSI6eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5pdCIsImlkIjoxLCJyb2xlcyI6W119fQ.APZ7qpQje5yLpja97HA1x8uInfmCdIblKyfX4CDUD-E', '[]'),
-(2, 1, '127.0.0.1:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NDE5NDY2NzUsImV4cCI6MTc0MjU1MTQ3NSwiZGF0YSI6eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5pdCIsImlkIjoxLCJyb2xlcyI6WyJST0xFX0FETUlOIl19fQ.wsUhsP0iDfdjk5dHREJKvC4JQx9OPZgmXdFGXVtz0D4', '[]');
+(1, 1, '127.0.0.1:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NDk0NjI0NDEsImV4cCI6MTc1MDA2NzI0MSwiZGF0YSI6eyJlbWFpbCI6InRlc3RAaS5pIiwiaWQiOjEsInJvbGVzIjpbXX19.mBvQsPuT4NJ8jblTVrf7sFPVg32DswFNdkZ29w_xqGk', '[]'),
+(2, 1, '127.0.0.1:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NDk1NTc0NzcsImV4cCI6MTc1MDE2MjI3NywiZGF0YSI6eyJlbWFpbCI6InRlc3RAaS5pIiwiaWQiOjEsInJvbGVzIjpbXX19.CupTQTY9fw5u7r9-i0qPOk7i-ZfcKxaRwLJuxyaeFBw', '[]'),
+(4, 1, '127.0.0.1:PostmanRuntime/7.44.0', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NDk1NjE4MTIsImV4cCI6MTc1MDE2NjYxMiwiZGF0YSI6eyJlbWFpbCI6InRlc3RAaS5pIiwiaWQiOjEsInJvbGVzIjpbXX19.KbQe9qN-ILQnPjuAq7fJGpq8BkrA6VXBWtl3zOJfKPk', '[]'),
+(5, 1, '127.0.0.1:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NTAzMjEyMDYsImV4cCI6MTc1MDkyNjAwNiwiZGF0YSI6eyJlbWFpbCI6InRlc3RAaS5pIiwiaWQiOjEsInJvbGVzIjpbXX19.W9AoHRxLAzktJ_jls1JonlLsdCP1MnXxtLmxjjJLfIo', '[]'),
+(6, 1, '127.0.0.1:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NTAzMjEyMDcsImV4cCI6MTc1MDkyNjAwNywiZGF0YSI6eyJlbWFpbCI6InRlc3RAaS5pIiwiaWQiOjEsInJvbGVzIjpbXX19.FfbIBcd-pdnIMshRNophpZQG4y1qjQAfAnNWC-B621g', '[]'),
+(7, 1, '127.0.0.1:Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE3NTAzMjkyOTIsImV4cCI6MTc1MDkzNDA5MiwiZGF0YSI6eyJlbWFpbCI6InRlc3RAaS5pIiwiaWQiOjEsInJvbGVzIjpbXX19.cGVIQcAmcKkyJFj7k63U-xTXOC6jmTIFatXodTEWcy0', '[]');
 
 -- --------------------------------------------------------
 
@@ -152,13 +144,6 @@ CREATE TABLE `role` (
   `can_update` tinyint(1) NOT NULL,
   `can_delete` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dump dei dati per la tabella `role`
---
-
-INSERT INTO `role` (`id`, `name`, `can_create`, `can_read`, `can_update`, `can_delete`) VALUES
-(1, 'ROLE_ADMIN', 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -179,7 +164,32 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `password`, `name`, `surname`) VALUES
-(1, 'test@example.it', '$2y$13$5.bW.SYuXsH1ncMNfL.WX.SYzRPEc1KxbEUEIRKbNX349hHL4F9TO', 'pierone', 'cipolla');
+(1, 'admin', '$2y$13$jwMTncZ3nciER024WpsKhe10xXVU5GNHQsoTTgUrXYH01WLtPlnU6', 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `user_race`
+--
+
+CREATE TABLE `user_race` (
+  `user_id` int(11) NOT NULL,
+  `race_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `size` varchar(255) NOT NULL,
+  `total` double NOT NULL,
+  `km` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dump dei dati per la tabella `user_race`
+--
+
+INSERT INTO `user_race` (`user_id`, `race_id`, `id`, `name`, `size`, `total`, `km`) VALUES
+(1, 1, 6, 'martina cagliani', 'S', 85.5, 10),
+(1, 1, 15, 'gianluca pierone', 'L', 85.5, 10),
+(1, 1, 16, '4 2', 'M', 85.5, 10);
 
 -- --------------------------------------------------------
 
@@ -191,13 +201,6 @@ CREATE TABLE `user_role` (
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dump dei dati per la tabella `user_role`
---
-
-INSERT INTO `user_role` (`user_id`, `role_id`) VALUES
-(1, 1);
 
 --
 -- Indici per le tabelle scaricate
@@ -260,6 +263,14 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `UNIQ_IDENTIFIER_EMAIL` (`email`);
 
 --
+-- Indici per le tabelle `user_race`
+--
+ALTER TABLE `user_race`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `IDX_A0EEF766A76ED395` (`user_id`),
+  ADD KEY `IDX_A0EEF7666E59D40D` (`race_id`);
+
+--
 -- Indici per le tabelle `user_role`
 --
 ALTER TABLE `user_role`
@@ -293,25 +304,31 @@ ALTER TABLE `photo`
 -- AUTO_INCREMENT per la tabella `race`
 --
 ALTER TABLE `race`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la tabella `refresh_token`
 --
 ALTER TABLE `refresh_token`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT per la tabella `role`
 --
 ALTER TABLE `role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT per la tabella `user`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT per la tabella `user_race`
+--
+ALTER TABLE `user_race`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Limiti per le tabelle scaricate
@@ -328,6 +345,13 @@ ALTER TABLE `photo`
 --
 ALTER TABLE `refresh_token`
   ADD CONSTRAINT `FK_C74F2195A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
+
+--
+-- Limiti per la tabella `user_race`
+--
+ALTER TABLE `user_race`
+  ADD CONSTRAINT `FK_A0EEF7666E59D40D` FOREIGN KEY (`race_id`) REFERENCES `race` (`id`),
+  ADD CONSTRAINT `FK_A0EEF766A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`);
 
 --
 -- Limiti per la tabella `user_role`
